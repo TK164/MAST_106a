@@ -1,0 +1,13 @@
+<launch>
+
+<!--
+<node pkg="gmapping" name="gstring" type="gmapping_slam">
+  <remap from="scan" to="base_scan" />
+</node>
+-->
+
+<node pkg="pointcloud_to_laserscan" name="myass" type="pointcloud_to_laserscan_node">
+  <remap from="cloud_in" to="/zed/point_cloud/cloud_registered" />
+</node>
+
+</launch>

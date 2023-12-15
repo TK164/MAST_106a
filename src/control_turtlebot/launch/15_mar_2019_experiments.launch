@@ -1,0 +1,16 @@
+<launch>
+  <!-- Run ZED camera ROS wrapper -->
+  <include file="$(find zed_wrapper)/launch/zed.launch" />
+
+  <!-- Run the point cloud to laser scan node -->
+  <node name="cloud2scan" pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node">
+    <remap from="cloud_in" to="/zed/point_cloud/cloud_registered" />
+  </node>
+
+  <!-- Run gmapping for SLAM and occupancy grid -->
+  <node name="gstring" pkg="gmapping" type="slam_gmapping">
+    <param name="base_frame" value="zed_camera_center" />
+    <param name="map_update_interval" value="0.1" />
+  </node>
+  
+</launch>

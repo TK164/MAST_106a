@@ -1,0 +1,5 @@
+<launch>
+  <!-- Run ZED camera ROS wrapper -->
+  <include file="$(find zed_wrapper)/launch/zed.launch" />
+  
+</launch>

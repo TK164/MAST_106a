@@ -1,0 +1,7 @@
+image: /home/vtolani/catkin_ws/src/saved_maps/slam_map.pgm
+resolution: 0.030000
+origin: [-3.000000, -3.000000, -nan]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

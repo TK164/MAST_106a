@@ -1,0 +1,8 @@
+<launch>
+
+<node pkg="gmapping" name="gstring" type="gmapping_slam" />
+
+<node pkg="pointcloud_to_laserscan" name="myass" type="pointcloud_to_laserscan_node" />
+
+
+</launch>
