@@ -1,0 +1,2 @@
+set(mapping_MESSAGE_FILES "msg/MapData.msg")
+set(mapping_SERVICE_FILES "")
